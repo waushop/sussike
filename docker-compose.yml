@@ -17,7 +17,7 @@ services:
     environment:
       - url=https://sussike.ee
     volumes:
-      - /data/myghostdir:/var/lib/ghost/content
+      - /home/wauhost/src/apps/sussike-ee/data:/var/lib/ghost/content
     restart: unless-stopped
     logging:
       options:
