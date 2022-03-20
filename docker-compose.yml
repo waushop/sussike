@@ -1,0 +1,32 @@
+version: '3'
+
+networks:
+  # enable connection with Traefik
+  proxy:
+    external: true
+  # network for the app
+  internal:
+
+services:
+
+  sussike-ghost:
+    container_name: sussike
+    image: ghost:4
+    ports:
+      - 8080:2368
+    environment:
+      - url=https://sussike.ee
+    volumes:
+      - /data/myghostdir:/var/lib/ghost/content
+    restart: unless-stopped
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.sussike-secured.rule=Host(`sussike.ee`,`www.sussike.ee`)"
+      - "traefik.http.routers.sussike-secured.entrypoints=websecure"
+    networks:
+      - proxy
