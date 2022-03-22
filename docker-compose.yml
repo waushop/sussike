@@ -11,7 +11,7 @@ services:
 
   sussike-ghost:
     container_name: sussike
-    image: ghost:4
+    image: ghost:latest
     ports:
       - 8080:2368
     environment:
