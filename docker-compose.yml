@@ -12,8 +12,6 @@ services:
   ghost:
     container_name: sussike
     image: ghost:latest
-    ports:
-      - 8080:2368
     environment:
       - url=https://sussike.ee
     volumes:
