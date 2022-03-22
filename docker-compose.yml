@@ -1,12 +1,8 @@
 version: '3'
 
 networks:
-  # enable connection with Traefik
   proxy:
     external: true
-  # network for the app
-  internal:
-
 services:
 
   ghost:
