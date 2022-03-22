@@ -9,7 +9,7 @@ networks:
 
 services:
 
-  sussike-ghost:
+  ghost:
     container_name: sussike
     image: ghost:latest
     ports:
