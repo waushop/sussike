@@ -13,7 +13,7 @@ services:
       - database__client=mysql
       - database__connection__host=sussike-db
       - database__connection__user=sussike
-      - database__connection_password=mustikakissell
+      - database__connection__password=mustikakissell
       - database__connection__database=sussike
       - NODE_ENV=production
       - url=https://sussike.ee
