@@ -40,6 +40,6 @@ services:
       - MYSQL_DATABASE=sussike
       - MYSQL_USER=sussike
       - MYSQL_PASSWORD=mustikakissell
-      - MYSQL_ROOT_HOST=172.*.*.*
+      - MYSQL_ROOT_HOST=172.20.0.2
     volumes:
       - /home/wauhost/src/apps/sussike-ee/db:/var/lib/mysql
