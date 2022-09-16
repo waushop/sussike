@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
     environment:
       - database__client=mysql
-      - database__connection__host=ghost-db
+      - database__connection__host=sussike-db
       - database__connection__user=sussike
       - database__connection_password=mustikakissell
       - database__connection__database=sussike
