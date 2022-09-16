@@ -43,3 +43,5 @@ services:
       - MYSQL_ROOT_HOST=172.*.*.*
     volumes:
       - /home/wauhost/src/apps/sussike-ee/db:/var/lib/mysql
+    networks:
+      - proxy
